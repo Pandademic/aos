@@ -7,9 +7,11 @@ mod vga_buffer;
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-    println!("Hello World{}", "!");
-    //panic!("AHHHHHHHHHh!!!!");
-    loop {}
+    println!("Loaded!");
+    println!("you are seeing this message , which mean's nothing exploded yet....");
+    print!("\n\n\n");
+    panic!("OH NO!!!! SOMETHING EXPLODED!!!!");
+    //loop {}
 }
 
 /// This function is called on panic.
