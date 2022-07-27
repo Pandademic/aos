@@ -4,14 +4,13 @@
 use core::panic::PanicInfo;
 
 mod vga_buffer;
+mod ribbit;
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-    println!("Loaded!");
-    println!("you are seeing this message , which mean's nothing exploded yet....");
-    print!("\n\n\n");
-    panic!("OH NO!!!! SOMETHING EXPLODED!!!!");
-    //loop {}
+    println!("info: main::_start() inited.");
+    ribbit::croak();
+    loop{}
 }
 
 /// This function is called on panic.
